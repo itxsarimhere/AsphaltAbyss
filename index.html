@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#0a0a0a">
+  <meta name="description" content="Asphalt Abyss — a browser-based 3D street racing game.">
+  <link rel="icon" type="image/jpeg" href="assets/asphalt-abyss-logo.jpg">
+  <title>Asphalt Abyss — 3D Street Racing</title>
+  <style>
+    html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#050505;font-family:Arial,sans-serif}
+    .boot{position:fixed;inset:0;display:grid;place-items:center;background:#050505;z-index:2;transition:opacity .35s}
+    .boot img{width:min(560px,84vw);max-height:210px;object-fit:contain;filter:drop-shadow(0 12px 30px rgba(0,0,0,.6))}
+    .boot p{margin:16px 0 0;text-align:center;color:#aaa;letter-spacing:3px;font-size:12px;text-transform:uppercase}
+    iframe{position:fixed;inset:0;width:100%;height:100%;border:0;display:block}
+  </style>
+</head>
+<body>
+  <div class="boot" id="boot"><div><img src="assets/asphalt-abyss-logo.jpg" alt="Asphalt Abyss"><p>Loading the abyss…</p></div></div>
+  <iframe src="asphalat%20abyss.html" title="Asphalt Abyss racing game" allow="autoplay; fullscreen; gamepad" allowfullscreen></iframe>
+  <script>setTimeout(()=>{const b=document.getElementById('boot');b.style.opacity='0';setTimeout(()=>b.remove(),400)},900)</script>
+</body>
+</html>
